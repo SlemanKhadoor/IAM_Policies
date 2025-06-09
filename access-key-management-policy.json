@@ -1,0 +1,19 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowUsersToManageTheirOwnCredentials",
+			"Effect": "Allow",
+			"Action": [
+				"iam:ChangePassword",
+				"iam:GetUser",
+				"iam:CreateAccessKey",
+				"iam:ListAccessKeys",
+				"iam:UpdateAccessKey",
+				"iam:DeleteAccessKey",
+				"iam:TagUser"
+			],
+			"Resource": "arn:aws:iam::*:user/${aws:username}"
+		}
+	]
+}
